@@ -27,9 +27,9 @@
 
 \begin{document}
 
-{\bf\Large Setup of the comparisons of NC-DY codes}\\
+{\Large \bf Setup of the comparisons of NC-DY codes}\\
 
- 
+ {\bf Input parameters}\\
 
 
 \begin{tabular}{llll}
@@ -62,56 +62,117 @@ Electroweak parameters & &\\
   $m_b$                   = 4.7d0 &
   $m_t$                   = 173d0 & \\
   conhc                    = 389379323d0  & & & \\
-  ~~~~~~~~~~~(3893793721 ?) & & & \\
+  ~~~~~~~~~~~(389379372.1 ?) & & & \\
 \end{tabular}
+%% \begin{tabular}{lll}
+%%   $ \Delta \alpha (91.15348)$
+%%   & POWHEG\_ew
+%%   &  $\!\!\!$(5.89760567146062550E-002,-1.62163027982058471E-002) \\
+%%   &  MCSANC
+%%   &  5.8975530055977214E-002 (no top loop) \\
+%%   &  WZGRAD
+%%   &  5.8975530126199806E-002 (no top loop) \\
+%%   &
+%%   &  5.8916735546098963E-002 (with top loop) \\
+%%   $1/\alpha(91.15348)$
+%%   & POWHEG\_ew
+%%   & $\!\!\!$(128.95414861873800,2.2222171242374937) \\
+%%   & MCSANC
+%%   & 128.95422078992519 (no top loop)       \\
+%%   & WZGRAD
+%%   & 128.95422078030214 (no top loop)  \\
+%%   &
+%%   & 128.96227776336096 (with top loop) \\
+%%   $\Delta r$
+%%   &  POWHEG\_ew
+%%   &  $\!\!\!$(2.97632672697318683E-002,-2.89767823517196148E-002) \\
+%%   & MCSANC
+%%   & 2.9762759543028511E-002\\                                                   
+%%   & WZGRAD
+%%   & 2.9762761199628920E-002
+%% \end{tabular}
 \begin{tabular}{lll}
   $ \Delta \alpha (91.15348)$
   & POWHEG\_ew
-  &  $\!\!\!$(5.89760567146062550E-002,-1.62163027982058471E-002) \\
+  &  $\!\!\!$(5.8976057E-002,-1.6216303E-002) \\
   &  MCSANC
-  &  5.8975530055977214E-002 (no top loop) \\
+  &  5.8975530E-002 (no top loop) \\
   &  WZGRAD
-  &  5.8975530126199806E-002 (no top loop) \\
+  &  5.8975530E-002 (no top loop) \\
   &
-  &  5.8916735546098963E-002 (with top loop) \\
+  &  5.8916736E-002 (with top loop) \\
   $1/\alpha(91.15348)$
   & POWHEG\_ew
-  & $\!\!\!$(128.95414861873800,2.2222171242374937) \\
+  & $\!\!\!$(128.95415,2.2222171) \\
   & MCSANC
-  & 128.95422078992519 (no top loop)       \\
+  & 128.95422 (no top loop)       \\
   & WZGRAD
-  & 128.95422078030214 (no top loop)  \\
+  & 128.95422 (no top loop)  \\
   &
-  & 128.96227776336096 (with top loop) \\
+  & 128.96228 (with top loop) \\
   $\Delta r$
   &  POWHEG\_ew
-  &  $\!\!\!$(2.97632672697318683E-002,-2.89767823517196148E-002) \\
+  &  $\!\!\!$(2.9763267E-002,-2.8976782E-002) \\
   & MCSANC
-  & 2.9762759543028511E-002\\                                                   
+  & 2.9762759E-002\\                                                   
   & WZGRAD
-  & 2.9762761199628920E-002
+  & 2.9762761E-002
 \end{tabular}
+
 \vskip0.5cm
 
-\noindent
+
+
+{\bf Additional choices}\\
 Final-state: bare muons.\\
+The choice of the proton PDF set is currently {\tt MSTW2008nlo68cl}.
+A consistent discussion of the photon-induced processes would require the choice
+of {\tt NNPDF3.1} or of {\tt MMHT2015}, which feature both a QCD-only and a full QCD+QED DGLAP evolution of the parton densities.\\
 The factorisation and renormalisation scales are set equal to the lepton-pair
 invariant mass $\mu_R=\mu_F=M_{ll}$.\\
-The choice of the proton PDF set is {\tt MSTW2008nlo68cl}.\\
 The EW input schemes for all the technical comparisons are:
-(i) $(\alpha,\mw,\mz)$ and (ii) $(G_\mu,\mw,\mz)$
+(i) $(\alpha,\mw,\mz)$, (ii) $(G_\mu,\mw,\mz)$.
+When possible,
+also (iii) $(\alpha,\seffl,\mz)$ and (iv) $(G_\mu,\seffl,\mz)$
+should be considered.
+Hybrid schemes, using different couplings
+to parameterise the QED and weak corrections,
+are part of the discussion about the best predictions.\\
+Different prescriptions available to define
+the pole of the gauge boson propagators
+should be part of the discussion of the higher-order effects and uncertainties.\\[3mm]
 
 
 
-Cuts: no pt, eta, mll=[60,150] GeV with binsize=1 GeV
+{\bf Observables and cuts}\\
+Cuts: $M_{ll}> 50$ GeV in all the simulations.\\
+The invariant mass distributions are studied in the range
+$M_{ll}\in [60,150]$ GeV with a bin size of 1 GeV.
+The cross sections integrated in specific mass windows can be obtained by combining the differential results.
 
-Observables: x-section, forward-, backward-x-sections for
-QED(ISR,IFI), pure weak (PW), high order (HO):
-1. PW
-2. PW+HO
-3. ISR
-4. IFI
-(5. FSR) -- shall we include this?
+Two different sets of additional cuts are considered:
+(a) fully inclusive acceptance and
+(b) standard fiducial cuts on the leptons, i.e.
+$p_\perp^{l^+}>25$ GeV,
+$p_\perp^{l^-}>25$ GeV,
+$|\eta_{l^+}|<2.5$,
+$|\eta_{l^-}|<2.5$.
+The LHCb configuration with $2<\eta_{l^\pm}<4.5$ could be of interest.\\[5mm]
+Observables: total, forward and backward invariant mass distributions.
+The definition of forward (backward) relies on the value of the scattering angle
+of the negatively charged lepton, in the Collins-Soper frame.\\
+Shall we include also $A_4$ ?\\[5mm]
+
+{\bf Approximations}\\
+We consider the LO and NLO-EW results for a technical comparison
+(i.e. where we ideally expect to obtain identical results by all the codes ).\\
+We break the NLO-EW results into QED (ISR,IFI,FSR) and pure weak (PW) subsets.\\
+We consider for high-order (HO) contributions:
+(i) the universal corrections which can be reabsorbed into a redefinition
+of the lowest order couplings;
+(ii) higher-order QED effects;
+(iii) effects due to the matching between NLO-EW and multiple photon effects.
+
 
 
 \end{document}
